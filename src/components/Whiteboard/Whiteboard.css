@@ -1,0 +1,90 @@
+/* ===========================
+   Whiteboard.css
+=========================== */
+
+.whiteboard-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.whiteboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.whiteboard-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.whiteboard-header p {
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 15px;
+}
+
+.join-btn {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.join-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+.canvas {
+  flex: 1;
+  min-height: 600px;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid #dbe4ee;
+  background: #ffffff;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.03);
+}
+
+/* Excalidraw Full Height */
+
+.canvas .excalidraw {
+  height: 100%;
+  width: 100%;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .whiteboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .join-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .whiteboard-header h2 {
+    font-size: 22px;
+  }
+
+  .whiteboard-header p {
+    font-size: 14px;
+  }
+
+  .canvas {
+    min-height: 500px;
+  }
+}

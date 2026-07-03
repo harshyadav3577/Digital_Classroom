@@ -1,0 +1,129 @@
+.header{
+
+    height:80px;
+
+    padding:0 40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+
+    color:white;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.logo-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.logo-circle{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:26px;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.logo-section h2{
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.logo-section p{
+
+    font-size:13px;
+
+    opacity:.85;
+
+}
+
+.header-icons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+.icon{
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.icon:hover{
+
+    transform:scale(1.2);
+
+}
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:rgba(255,255,255,.15);
+
+    padding:8px 15px;
+
+    border-radius:50px;
+
+}
+
+.profile-icon{
+
+    font-size:34px;
+
+}
+
+.profile h4{
+
+    font-size:15px;
+
+}
+
+.profile span{
+
+    font-size:12px;
+
+    opacity:.8;
+
+}
