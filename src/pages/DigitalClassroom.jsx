@@ -1,27 +1,44 @@
+import { useState } from "react";
 import "./DigitalClassroom.css";
+
 import Header from "../components/Header/Header";
 import Whiteboard from "../components/Whiteboard/Whiteboard";
 import ClassroomChat from "../components/ClassroomChat/ClassroomChat";
+import RoleSelector from "../components/RoleSelector/RoleSelector";
 
 function DigitalClassroom() {
+  const [currentUser, setCurrentUser] = useState(null);
+
   return (
-    <div className="page">
+    <>
+      {!currentUser && (
+        <RoleSelector
+          onSelect={(user) => setCurrentUser(user)}
+        />
+      )}
 
-      <Header />
+      {currentUser && (
+        <div className="page">
 
-      <div className="main-content">
+          <Header />
 
-        <div className="whiteboard">
-           <Whiteboard />
+          <div className="main-content">
+
+            <div className="whiteboard">
+              <Whiteboard />
+            </div>
+
+            <div className="chat">
+              <ClassroomChat
+                currentUser={currentUser}
+              />
+            </div>
+
+          </div>
+
         </div>
-
-        <div className="chat">
-  <ClassroomChat />
-</div>
-
-      </div>
-
-    </div>
+      )}
+    </>
   );
 }
 
